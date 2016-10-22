@@ -18,7 +18,7 @@
         "newtab": "newtab.html"
     },
     "content_scripts": [{
-        "js": ["birthday.js"]
-    
+        "js": ["birthday.js"],
+        "matches": ["http://*/*"]
     }]
 }
