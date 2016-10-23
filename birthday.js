@@ -6,17 +6,19 @@ document.addEventListener('DOMContentLoaded', function() {
                           
     
     // Testing purposes
-    localStorage.clear();
+    // localStorage.clear();
                           
                           
     // If there is already local storage, show timer
-    var loadedDate = JSON.parse(localStorage.getItem('date'));
-    if(loadedDate){
+    var loadedDateString = JSON.parse(localStorage.getItem('date'));
+    if(loadedDateString){
         // Disallows reentry
         document.getElementById('input-form').style.visibility = "hidden";
-        prepareTimer(loadedDate);
+        
+        prepareTimer(new Date(loadedDateString));
     }
 })
+
 
 function handleClick(event){
     // Stops submit
@@ -33,6 +35,7 @@ function handleClick(event){
     prepareTimer(source);
 }
 
+
 function prepareTimer(source) {
     var displayElement = document.getElementById('results');
     
@@ -46,8 +49,6 @@ function startTimer(displayElement, input){
                 
                 var now = new Date();
                 
-                
-                
                 var elapsedMS = now - input;
                 var years = Math.floor(elapsedMS / (365.2425 * 24 * 60 * 60 * 1000));
                 var total_days = Math.floor(elapsedMS / (24 * 60 * 60 * 1000)); // Also counts full years
@@ -60,18 +61,23 @@ function startTimer(displayElement, input){
                 var minutes = Math.floor(elapsedMS % (60 * 60 * 1000) / (60 * 1000));
                 var hours = Math.floor(elapsedMS % (24 * 60 * 60 * 1000) / (60 * 60 * 1000));
                 
+                // Padding of milliseconds
+                milliseconds = String("000" + milliseconds).slice(-3);
                 
-                displayElement.innerHTML = years + '<br/>' + 
-                                           days + '<br/>' +
-                                           hours + '<br/>' +
-                                           minutes + '<br/>' +
-                                           seconds + '<br/>' +
-                                           milliseconds;
+                
+                displayElement.innerHTML = '<h4>' +
+                                           years + ' years <br/>' +
+                                           days + ' days <br/>' +
+                                           hours + ' hours <br/>' +
+                                           minutes + ' minutes <br/>' +
+                                           seconds + ' seconds <br/>' +
+                                           milliseconds + ' ms' +
+                                           '</h4>';
                 
                 
 //                console.log(displayElement)
 //                console.log(now, "NOW")
 //                console.log(input, "input")
                 
-    }, 81)
+    }, 61)
 }

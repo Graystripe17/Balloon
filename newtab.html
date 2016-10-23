@@ -1,26 +1,38 @@
 <html>
+    
+    <link rel="stylesheet" type="text/css" href="cerulean/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
 
     <title>
         Balloon
     </title>
 
     <head>
-        
-        HI
-        
+        <div class="container">
+            <h1>Balloon</h1>
+        </div>
     </head>
     
-    <link rel="stylesheet" type="text/css" href="cerulean/bootstrap.min.css">
-
-    <script type="text/javascript" src="birthday.js"></script>
-    
-    <form id="input-form">
-        <input type="datetime-local" id="birthday-input" value="2000-01-01T11:11">
-        <button type="submit" id="submit">Submit</button>
-    </form>
-
-    <div id="results"></div>
-
+    <body>
+        <script type="text/javascript" src="birthday.js"></script>
+        
+        <form id="input-form">
+            <input type="datetime-local" id="birthday-input" value="2000-01-01T11:11">
+            <button type="submit" id="submit">Submit</button>
+        </form>
+        
+        <div class="panel panel-primary sm-margin">
+            <div class="panel-heading">
+                <h1 class="panel-title">Age</h1>
+            </div>
+            <div id="results" class="panel-body">
+                
+            </div>
+        </div>
+        
+    </body>
 
 
 

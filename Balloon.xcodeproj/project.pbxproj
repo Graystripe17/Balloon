@@ -10,6 +10,7 @@
 		4F0FE5241DB594DC00FF175A /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		4F0FE5251DB59DEB00FF175A /* newtab.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = newtab.html; sourceTree = "<group>"; };
 		4F0FE5261DB5B37300FF175A /* birthday.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = birthday.js; sourceTree = "<group>"; };
+		4F2893EE1DBD78D800DA1599 /* style.css */ = {isa = PBXFileReference; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
@@ -17,6 +18,7 @@
 			isa = PBXGroup;
 			children = (
 				4F0FE5251DB59DEB00FF175A /* newtab.html */,
+				4F2893EE1DBD78D800DA1599 /* style.css */,
 				4F0FE5261DB5B37300FF175A /* birthday.js */,
 				4F0FE5241DB594DC00FF175A /* manifest.json */,
 			);

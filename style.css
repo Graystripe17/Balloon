@@ -1,0 +1,12 @@
+
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-center: center;
+}
+
+.sm-margin {
+    margin: 40px
+    
+}
