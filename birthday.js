@@ -2,7 +2,7 @@
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    document.querySelector('button').addEventListener('click', handleClick);
+    document.getElementById('submit').addEventListener('click', handleClick);
                           
     
     // Testing purposes
@@ -16,6 +16,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('input-form').style.visibility = "hidden";
         
         prepareTimer(new Date(loadedDateString));
+    } else {
+        // Hide age display
+        document.getElementById('age').style.visibility = "hidden";
     }
 })
 
@@ -37,6 +40,7 @@ function handleClick(event){
 
 
 function prepareTimer(source) {
+    document.getElementById('age').style.visibility = "visible";
     var displayElement = document.getElementById('results');
     
     startTimer(displayElement, source);
